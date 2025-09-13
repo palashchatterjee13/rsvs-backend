@@ -53,10 +53,10 @@ export const login = async (req: Request, res: Response) => {
         );
 
         res.cookie("inChargeAuthToken", inChargeAuthToken, {
-            // httpOnly: true,
             maxAge: 7 * 24 * 60 * 60 * 1000,
-            // sameSite: "none",
-            // secure: process.env.NODE_ENV === "production",
+            sameSite: "none",
+            httpOnly: false,
+            secure: true,
         });
 
         return res.status(200).json({

@@ -58,10 +58,10 @@ const studentLogin = async (req: Request, res: Response) => {
         );
 
         res.cookie("studentAuthToken", studentAuthToken, {
-            // httpOnly: true,
             maxAge: 180 * 24 * 60 * 60 * 1000,
-            sameSite: "strict",
-            secure: process.env.NODE_ENV === "production",
+            sameSite: "none",
+            httpOnly: false,
+            secure: true,
         });
 
         return res.status(200).json({

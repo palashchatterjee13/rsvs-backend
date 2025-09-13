@@ -23,8 +23,9 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Resident Student Verification System (RSVS)");
 });
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://palashchatterjee13.github.io/", credentials: true }));
 app.use(cookieParser());
+app.set("trust proxy", 1);
 
 app.listen(port, () => {
   console.log(`ℹ️  [server]: Server is running at http://localhost:${port}`);
