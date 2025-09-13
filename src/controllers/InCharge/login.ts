@@ -70,6 +70,7 @@ export const login = async (req: Request, res: Response) => {
         return res.status(500).json({
             status: "error",
             message: "Internal server error",
+            error: error,
         });
     }
 };
