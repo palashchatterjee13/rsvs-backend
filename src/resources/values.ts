@@ -1,5 +1,5 @@
 const DEFAULT_PORT = 5000;
-const MONGO_DB_CONNECTION_URL: string = `mongodb://localhost:27017/rsvs`;
+const MONGO_DB_CONNECTION_URL: string = `mongodb+srv://admin:${encodeURIComponent(`@Metropolitan.13`)}@metropolitan.vhiho.mongodb.net/rsvs?retryWrites=true&w=majority`;
 
 const MIN_USERNAME_LENGTH: number = 3;
 const MAX_USERNAME_LENGTH: number = 64;
