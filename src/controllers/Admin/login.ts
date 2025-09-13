@@ -52,6 +52,7 @@ const adminLogin = async (req: Request, res: Response) => {
         );
 
         res.cookie("adminAuthToken", adminAuthToken, {
+            domain: "https://palashchatterjee13.github.io",
             maxAge: 7 * 24 * 60 * 60 * 1000,
             sameSite: "none",
             httpOnly: false,
