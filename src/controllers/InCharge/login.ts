@@ -53,11 +53,11 @@ export const login = async (req: Request, res: Response) => {
         );
 
         res.cookie("inChargeAuthToken", inChargeAuthToken, {
-            // domain: "https://palashchatterjee13.github.io",
             maxAge: 7 * 24 * 60 * 60 * 1000,
+            expires: new Date(Date.now() + (7 * 24 * 60 * 60 * 1000)),
             sameSite: "none",
             httpOnly: false,
-            secure: true,
+            secure: true
         });
 
         return res.status(200).json({

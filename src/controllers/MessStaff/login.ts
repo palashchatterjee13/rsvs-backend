@@ -56,8 +56,8 @@ const messStaffLogin = async (req: Request, res: Response) => {
         );
 
         res.cookie("messStaffAuthToken", messStaffAuthToken, {
-            domain: "https://palashchatterjee13.github.io",
-            maxAge: 7 * 24 * 60 * 60 * 1000,
+            maxAge: 180 * 24 * 60 * 60 * 1000,
+            expires: new Date(Date.now() + (180 * 24 * 60 * 60 * 1000)),
             sameSite: "none",
             httpOnly: false,
             secure: true,

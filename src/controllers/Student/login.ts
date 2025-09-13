@@ -58,8 +58,8 @@ const studentLogin = async (req: Request, res: Response) => {
         );
 
         res.cookie("studentAuthToken", studentAuthToken, {
-            domain: "https://palashchatterjee13.github.io",
             maxAge: 180 * 24 * 60 * 60 * 1000,
+            expires: new Date(Date.now() + (180 * 24 * 60 * 60 * 1000)),
             sameSite: "none",
             httpOnly: false,
             secure: true,
