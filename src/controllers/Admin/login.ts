@@ -55,7 +55,7 @@ const adminLogin = async (req: Request, res: Response) => {
             maxAge: 7 * 24 * 60 * 60 * 1000,
             expires: new Date(Date.now() + (7 * 24 * 60 * 60 * 1000)),
             sameSite: "none",
-            httpOnly: false,
+            httpOnly: true,
             secure: true,
         });
 

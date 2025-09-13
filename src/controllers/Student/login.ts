@@ -61,7 +61,7 @@ const studentLogin = async (req: Request, res: Response) => {
             maxAge: 180 * 24 * 60 * 60 * 1000,
             expires: new Date(Date.now() + (180 * 24 * 60 * 60 * 1000)),
             sameSite: "none",
-            httpOnly: false,
+            httpOnly: true,
             secure: true,
         });
 
