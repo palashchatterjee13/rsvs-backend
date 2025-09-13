@@ -1,0 +1,33 @@
+const DEFAULT_PORT = 5000;
+const MONGO_DB_CONNECTION_URL: string = `mongodb://localhost:27017/rsvs`;
+
+const MIN_USERNAME_LENGTH: number = 3;
+const MAX_USERNAME_LENGTH: number = 64;
+
+const MIN_PASSWORD_LENGTH: number = 8;
+const MAX_PASSWORD_LENGTH: number = 256;
+
+const MIN_NAME_LENGTH: number = 3;
+const MAX_NAME_LENGTH: number = 256;
+
+const MIN_EMAIL_LENGTH: number = 3;
+const MAX_EMAIL_LENGTH: number = 256;
+
+const MIN_PHONE_LENGTH: number = 7;
+const MAX_PHONE_LENGTH: number = 32;
+
+
+export {
+    DEFAULT_PORT,
+    MONGO_DB_CONNECTION_URL,
+    MIN_USERNAME_LENGTH,
+    MAX_USERNAME_LENGTH,
+    MIN_PASSWORD_LENGTH,
+    MAX_PASSWORD_LENGTH,
+    MIN_NAME_LENGTH,
+    MAX_NAME_LENGTH,
+    MIN_EMAIL_LENGTH,
+    MAX_EMAIL_LENGTH,
+    MIN_PHONE_LENGTH,
+    MAX_PHONE_LENGTH
+}
